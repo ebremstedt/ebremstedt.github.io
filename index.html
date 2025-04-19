@@ -1,1 +1,265 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Engineering Consultant</title>
+    <style>
+        :root {
+            --primary-color: #004225;
+            --secondary-color: #f8fafc;
+            --text-color: #1e293b;
+            --light-gray: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 0;
+            gap: 40px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #64748b;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #00592f;
+        }
+
+        .services {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .about {
+            padding: 60px 0;
+        }
+
+        .contact {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .contact-info {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">Your Name</div>
+                <div class="nav-links">
+                    <a href="#services">Services</a>
+                    <a href="experience.html">Experience</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Data Engineering Consultant</h1>
+                    <p class="tagline">Building robust data pipelines and scalable solutions for modern businesses</p>
+                    <a href="#contact" class="cta-button">Get in Touch</a>
+                </div>
+                <div class="hero-image">
+                    <img src="/api/placeholder/400/400" alt="Professional portrait">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 class="service-title">Data Pipeline Development</h3>
+                    <p>Design and implement efficient, scalable data pipelines to streamline your data processing workflows.</p>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-title">Data Architecture</h3>
+                    <p>Create robust data architectures that align with your business goals and technical requirements.</p>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-title">Cloud Migration</h3>
+                    <p>Seamlessly migrate your data workloads to cloud platforms like AWS, Azure, or GCP.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p>I'm a data engineering consultant with extensive experience in building and optimizing data infrastructure. My expertise spans across various industries, helping businesses leverage their data assets effectively.</p>
+            <p>With a background in [your specific background], I specialize in [your key specializations]. My approach focuses on creating maintainable, scalable solutions that solve real business problems.</p>
+            <p>To learn more about my professional journey, check out my <a href="experience.html" style="color: var(--primary-color); font-weight: 600;">work experience timeline</a>.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-info">
+                <p>Ready to transform your data infrastructure? Let's discuss how I can help your business.</p>
+                <p>Email: your.email@example.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Your Name | Data Engineering Consultant</p>
+        </div>
+    </footer>
+</body>
+</html>
