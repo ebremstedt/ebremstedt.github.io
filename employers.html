@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Experience | Data Engineering Consultant</title>
+    <style>
+        :root {
+            --primary-color: #113F67;
+            --secondary-color: #FDF5AA;
+            --text-color: #d55114;
+            --light-gray: #58A0C8;
+            --timeline-color: #F3B234;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1e3a5f;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #FDF5AA;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .page-title {
+            text-align: center;
+            padding: 40px 0;
+            background-color: white;
+            margin-bottom: 0;
+        }
+
+        .page-title h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+        }
+
+        .timeline-section {
+            padding: 60px 0;
+            background-color: var(--secondary-color);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--timeline-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover::after {
+            background-color: var(--primary-color);
+        }
+
+        .left {
+            left: 0;
+            text-align: right;
+        }
+
+        .right {
+            left: 50%;
+            text-align: left;
+        }
+
+        .left::after {
+            right: -17px;
+        }
+
+        .right::after {
+            left: -17px;
+        }
+
+        .timeline-content {
+            padding: 20px 25px;
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            text-align: left;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+        }
+
+        .left .timeline-content::before {
+            right: -20px;
+            border-left-color: white;
+        }
+
+        .right .timeline-content::before {
+            left: -20px;
+            border-right-color: white;
+        }
+
+        .date {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .description ul li {
+            margin-bottom: 8px;
+        }
+
+        .company {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 5px 0;
+            color: var(--primary-color);
+        }
+
+        .role {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #475569;
+        }
+
+        .description {
+            margin-bottom: 0;
+        }
+
+        .technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background-color: var(--light-gray);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .industry-tag {
+            background-color: #d55114;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .back-button {
+            display: block;
+            text-align: center;
+            margin: 40px auto;
+        }
+
+        .back-button a {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .back-button a:hover {
+            background-color: #00592f;
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 15px;
+            }
+
+            .timeline-item::after {
+                left: 15px;
+            }
+
+            .left, .right {
+                left: 0;
+                text-align: left;
+            }
+
+            .left::after, .right::after {
+                left: 15px;
+            }
+
+            .left .timeline-content::before, .right .timeline-content::before {
+                left: -20px;
+                border-right-color: white;
+                border-left-color: transparent;
+            }
+
+            .page-title {
+                padding: 20px 0;
+            }
+
+            .page-title h1 {
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 15px;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+
+            .timeline-section {
+                padding: 30px 0; /* Reduced from 60px */
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px; /* Reduced from 70px */
+                padding-right: 10px; /* Reduced from 15px */
+                margin-bottom: 20px; /* Reduced from 30px */
+            }
+
+            .timeline-content {
+                padding: 15px 20px; /* Reduced from 20px 25px */
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+
+            .timeline::after {
+                left: 20px; /* Adjusted for smaller padding */
+            }
+
+            .timeline-item::after {
+                left: 8px; /* Adjusted for smaller padding */
+                width: 20px; /* Reduced from 25px */
+                height: 20px; /* Reduced from 25px */
+            }
+
+            .left .timeline-content::before,
+            .right .timeline-content::before {
+                left: -15px; /* Adjusted for smaller content padding */
+            }
+
+            .technologies {
+                margin-top: 10px; /* Reduced from 15px */
+            }
+
+            .tech-tag, .industry-tag {
+                font-size: 0.7rem; /* Reduced from 0.8rem */
+                padding: 3px 8px; /* Reduced from 4px 10px */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">Erik Bremstedt</div>
+
+            </nav>
+        </div>
+    </header> -->
+
+    <div class="page-title">
+        <div class="container">
+            <h1>Erik Bremstedt</h1>
+            Senior Data Engineer
+        </div>
+        <br>
+        <div class="nav-links">
+            <a href="index.html">Assignments</a>
+            <a href="employers.html">Employers</a>
+        </div>
+    </div>
+
+    <!-- <div class="intro">
+        <p>A little short of ten years of experience in data engineering. I've had the privilege of working with diverse teams and industries. Below is a timeline of my professional journey.</p>
+    </div> -->
+
+    <section class="timeline-section">
+        <div class="container">
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="date">June 2025 - Present</span>
+                        <h3 class="company">Bremstedt Analytics</h3>
+                        <span class="industry-tag">Consultancy</span>
+                        <h4 class="role">Senior Data Engineering Consultant</h4>
+                        <div class="industries">
+                        </div>
+                        <div class="description"><br>
+                        <i>Decided to try my own wings!</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="date">May 2024 - Present</span>
+                        <h3 class="company">Stoix</h3>
+                        <span class="industry-tag">Consultancy</span>
+                        <span class="industry-tag">Startup</span>
+                        <h4 class="role">Senior Data Engineering Consultant</h4>
+                        <div class="industries">
+                        </div>
+                        <div class="description"><br>
+                        <i>Me and a friend, Esoon Ko (with whom I had worked together at Roxtec), decided to jump ship and join Stoix. Here we joined forces with three incredibly talented individuals with competence in software engineering, venture capital and data engineering. <br><br>The company was half consultancy and half startup. We made an orchestrator and a web-based data analytics platform. <br><br>Became pretty decent at Mario Kart.</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="date">Sep 2019 - Mar 2024</span>
+                        <h3 class="company">Forefront Consulting Group</h3>
+                        <span class="industry-tag">Consultancy</span>
+                         <h4 class="role">Data Engineer (Consultant)</h4>
+                        <p class="description">
+                        <i>My first time as a consultant. Met a lot of really cool people and made some new friends. <br><br>I organized a bunch of padel tournaments and made fika-torsdag a weekly thing (which apparently lived on after <I></I> was gone). <br><br>Helped with recruitment and interviews, something I quite enjoy doing.</i>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="date">Jan 2017 - Sep 2019</span>
+                        <h3 class="company">Karolinska</h3>
+                        <div class="industries">
+                        <span class="industry-tag">Healthcare</span>
+                        </div>
+                        <h4 class="role">Data Engineer</h4>
+                        <p class="description">
+                        <i>My first real job! It was an interesting experience which taught me so much about people and working, not to mention healthcare. <br><br>Very refreshing to work with people who are passioned about what they do.</i>
+                    </div>
+                </div>
+                <!-- Company 1 - Most Recent -->
+            </div>
+            <div class="back-button">
+                <a href="employers.html">Back to top</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Erik Bremstedt | Data Engineering Consultant</p>
+        </div>
+    </footer>
+</body>
+</html>
