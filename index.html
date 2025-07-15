@@ -318,6 +318,47 @@
             .nav-links a {
                 font-size: 0.9rem;
             }
+
+            .timeline-section {
+                padding: 30px 0; /* Reduced from 60px */
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px; /* Reduced from 70px */
+                padding-right: 10px; /* Reduced from 15px */
+                margin-bottom: 20px; /* Reduced from 30px */
+            }
+
+            .timeline-content {
+                padding: 15px 20px; /* Reduced from 20px 25px */
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+
+            .timeline::after {
+                left: 20px; /* Adjusted for smaller padding */
+            }
+
+            .timeline-item::after {
+                left: 8px; /* Adjusted for smaller padding */
+                width: 20px; /* Reduced from 25px */
+                height: 20px; /* Reduced from 25px */
+            }
+
+            .left .timeline-content::before,
+            .right .timeline-content::before {
+                left: -15px; /* Adjusted for smaller content padding */
+            }
+
+            .technologies {
+                margin-top: 10px; /* Reduced from 15px */
+            }
+
+            .tech-tag, .industry-tag {
+                font-size: 0.7rem; /* Reduced from 0.8rem */
+                padding: 3px 8px; /* Reduced from 4px 10px */
+            }
         }
     </style>
 </head>
