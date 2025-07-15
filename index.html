@@ -6,10 +6,10 @@
     <title>Professional Experience | Data Engineering Consultant</title>
     <style>
         :root {
-            --primary-color: #222222;
-            --secondary-color: #EDD9C0;
+            --primary-color: #113F67;
+            --secondary-color: #FDF5AA;
             --text-color: #d55114;
-            --light-gray: #e2e8f0;
+            --light-gray: #58A0C8;
             --timeline-color: #F3B234;
         }
 
@@ -155,6 +155,7 @@
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             position: relative;
+            text-align: left;
         }
 
         .timeline-content:hover {
@@ -192,6 +193,10 @@
             margin-bottom: 10px;
         }
 
+        .description ul li {
+            margin-bottom: 8px;
+        }
+
         .company {
             font-size: 1.4rem;
             font-weight: 600;
@@ -223,7 +228,16 @@
             border-radius: 15px;
             font-size: 0.8rem;
             font-weight: 500;
-            color: #475569;
+            color: #ffffff;
+        }
+
+        .industry-tag {
+            background-color: #d55114;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #ffffff;
         }
 
         .back-button {
@@ -290,7 +304,7 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <div class="logo">Erik Bremstedt</div>
+                <!-- <div class="logo">Erik Bremstedt</div> -->
                 <!-- <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="index.html#services">Services</a>
@@ -304,12 +318,12 @@
 
     <div class="page-title">
         <div class="container">
-            <h1>My Professional Journey</h1>
+            <h1>Erik Bremstedt</h1>
         </div>
     </div>
 
     <div class="intro">
-        <p>With over a decade of experience in data engineering and software development, I've had the privilege of working with diverse teams and technologies. Below is a timeline of my professional journey.</p>
+        <p>A little short of ten years of experience in data engineering. I've had the privilege of working with diverse teams and industries. Below is a timeline of my professional journey.</p>
     </div>
 
     <section class="timeline-section">
@@ -320,15 +334,30 @@
                         <span class="date">May 2024 - Present</span>
                         <h3 class="company">Region Stockholm</h3>
                         <h4 class="role">Data Engineer (Consultant)</h4>
-                        <p class="description">Leading data engineering initiatives for various clients across industries. Specializing in designing scalable data architectures and optimizing complex data pipelines.</p>
-                        <div class="technologies">
+                        <div class="industries">
+                        <span class="industry-tag">Public sector</span>
+                        <span class="industry-tag">Healthcare</span>
+                        </div>
+                        <div class="description">
+                        <ul>
+                            <li>Introduced SQLMesh, python and kubernetes for the data engineering team</li>
+                            <li>Recruited 2+ data engineers to help build the new data platform</li>
+                            <li>Setup Linux (RHEL9) environment for the compute part of the data pipelines.</li>
+                            <li>Built an encryption service using FastAPI which enabled teams to join data across different source systems</li>
+                            <li>Built a simple web app to manage and view testpatients, making it easy to filter them from production datasets</li>
+                            <li>Made a library which utilizes SQL Server metadata information to generate SQLMesh code for ingestion and transforms, enabling developers to scale their output of sqlmesh models tremendously</li>
+                        </ul>
+                        <i>Having an absolute blast working on stuff here. I feel like there is so much to contribute with, and not enough time to do it all. I have been given the freedom to help on many fronts, which is a lot of fun.</i>
+                        </div><div class="technologies">
                             <span class="tech-tag">Encryption</span>
                             <span class="tech-tag">Docker</span>
                             <span class="tech-tag">FastAPI</span>
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">K8s</span>
+                            <span class="tech-tag">SQL</span>
                             <span class="tech-tag">Postgres</span>
                             <span class="tech-tag">SQLMesh</span>
+                            <span class="tech-tag">Javascript</span>
                         </div>
                     </div>
                 </div>
@@ -336,13 +365,22 @@
                     <div class="timeline-content">
                         <span class="date">Nov 2022 - Dec 2023</span>
                         <h3 class="company">BHG Group</h3>
-                        <h4 class="role">Data Engineer (Consultant)</h4>
-                        <p class="description">Leading data engineering initiatives for various clients across industries. Specializing in designing scalable data architectures and optimizing complex data pipelines.</p>
+                        <div class="industries">
+                        <span class="industry-tag">Ecommerce</span>
+                        </div>
+                         <h4 class="role">Data Engineer (Consultant)</h4>
+                        <p class="description">
+                        <ul>
+                            <li>Led the data teams migration to a new data platform, which substantially reduced costs.</li>
+                            <li>Worked closely with stakeholders to scope and tailor their business needs.</li>
+                        </ul>
+                        <i>Enjoyed leading this team of data engineers remotely from Stockholm. The work was incredibly fast-paced, we had to really hone in on what was <b>essential</b> for making the deadline.</i>
                         <div class="technologies">
                             <span class="tech-tag">GCP</span>
                             <span class="tech-tag">Docker</span>
                             <span class="tech-tag">FastAPI</span>
                             <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PubSub</span>
                         </div>
                     </div>
                 </div>
@@ -350,13 +388,23 @@
                     <div class="timeline-content">
                         <span class="date">Nov 2022 - Dec 2023</span>
                         <h3 class="company">Roxtec Group</h3>
+                        <div class="industries">
+                        <span class="industry-tag">Manufacturing</span>
+                        </div>
                         <h4 class="role">Data Engineer (Consultant)</h4>
-                        <p class="description">Leading data engineering initiatives for various clients across industries. Specializing in designing scalable data architectures and optimizing complex data pipelines.</p>
+                        <p class="description">
+                        <ul>
+                            <li>Evaluated and then introduced a new orchestration, which helped make the data platform much easier to operate.</li>
+                            <li>Identified and implemented changes to tables and indices, significantly reducing costs.</li>
+                        </ul>
+                        <i>Had a lot of fun leading a data engineering team remotely from Stockholm. Roxtec has this culture of do-immediately, which I found incredibly intoxicating. There was very little bureacracy(!) and the people there were very nice, but that could just be people in Karlskrona in general.</i>
                         <div class="technologies">
                             <span class="tech-tag">GCP</span>
                             <span class="tech-tag">Docker</span>
                             <span class="tech-tag">FastAPI</span>
                             <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Google Workflows</span>
                         </div>
                     </div>
                 </div>
@@ -365,13 +413,23 @@
                     <div class="timeline-content">
                         <span class="date">Apr 2021 - Nov 2022</span>
                         <h3 class="company">Aller Media</h3>
+                        <div class="industries">
+                        <span class="industry-tag">Media & Content Creation</span>
+                        </div>
                         <h4 class="role">Data Engineer (Consultant)</h4>
-                        <p class="description">Leading data engineering initiatives for various clients across industries. Specializing in designing scalable data architectures and optimizing complex data pipelines.</p>
+                        <p class="description">
+                        <ul>
+                            <li>Created a slack bot which enabled content creators to quickly identify (and mend) issues with their articles.</li>
+                            <li>Built datapipelines that batched as well as streamed data.</li>
+                        </ul>
+                        <i>This is really where I learned to code properly, in part thanks to an exceptionally skilled (and patient) programmer called Marc Jamot. He also helped shift my mindset when it came to troubleshooting.</i>
                         <div class="technologies">
                             <span class="tech-tag">GCP</span>
                             <span class="tech-tag">Docker</span>
                             <span class="tech-tag">FastAPI</span>
                             <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Slack</span>
+                            <span class="tech-tag">PubSub</span>
                         </div>
                     </div>
                 </div>
@@ -381,8 +439,17 @@
                     <div class="timeline-content">
                         <span class="date">Jan 2020 - Apr 2021</span>
                         <h3 class="company">Randstad Sweden</h3>
+                        <div class="industries">
+                        <span class="industry-tag">Recruitment</span>
+                        </div>
                         <h4 class="role">Data Engineer (Consultant)</h4>
-                        <p class="description">Led a team of 5 engineers in building data infrastructure that processed over 10TB of data daily. Improved pipeline efficiency by 40% through optimization.</p>
+                        <p class="description">
+                        <ul>
+                            <li>Helped the data team to some new ways of working, introducing GIT and automatic deployment</li>
+                            <li>Made a PoC for a data pipeline using Google Cloud Platform</li>
+                            <li>Helped remove a bunch of legacy code.</li>
+                        </ul>
+                        <i>The people there were very nice and the team almost felt like a small family. Was a lot of fun to introduce new tools to the team.</i>
                         <div class="technologies">
                             <span class="tech-tag">SQL</span>
                             <span class="tech-tag">MSSQL</span>
@@ -397,11 +464,21 @@
                     <div class="timeline-content">
                         <span class="date">Sep 2019 - Apr 2021</span>
                         <h3 class="company">Swedish Federation of Unemployment Insurance Funds</h3>
+                        <div class="industries">
+                        <span class="industry-tag">Insurance</span>
+                        </div>
                         <h4 class="role">Data Engineer (Consultant)</h4>
-                        <p class="description">Designed and implemented ETL processes for business intelligence applications. Reduced reporting time from days to hours by optimizing data workflows.</p>
+                        <p class="description">
+                        <ul>
+                            <li>Built a new, easy to understand datawarehouse</li>
+                            <li>Helped the data team with setting up Tableau</li>
+                            <li>Migrated the team from Qlikview to Tableau</li>
+                        </ul>
+                        <i>My first experience as a consultant. Learned a lot from my colleagues (both technically and personally!). They gave me tools on how to manage expectation and delivery under a very strict timeline.</i>
                         <div class="technologies">
                             <span class="tech-tag">SQL</span>
                             <span class="tech-tag">Tableau</span>
+                            <span class="tech-tag">QlikView</span>
                             <span class="tech-tag">MSSQL</span>
                         </div>
                     </div>
@@ -412,13 +489,24 @@
                     <div class="timeline-content">
                         <span class="date">Jan 2017 -  Sep 2019</span>
                         <h3 class="company">Karolinska universitetssjukhuset</h3>
+                        <div class="industries">
+                        <span class="industry-tag">Healthcare</span>
+                        </div>
                         <h4 class="role">Data Engineer (Employee)</h4>
-                        <p class="description">Developed data-intensive applications for financial services clients. Implemented real-time analytics dashboard used by over 200 analysts.</p>
+                        <p class="description">
+                        <ul>
+                            <li>Created a system for our KPIs which uses state (terraform-esque) to keep track of what data is and is not loaded</li>
+                            <li>Led work on the architecture of the data warehouse</li>
+                            <li>Built Tableau dashboards to visualize both health and economic KPIs</li>
+                        </ul>
+                        <i>Really enjoyed working in healthcare. I did not think I would leave, but I worked with some incredible consultants that really inspired me to become one myself. They were nice, punctual, not to mention incredibly efficient. So I wanted to become more like them. I also left because I wanted to learn to use modern tools for data engineering. I always had the sense that I wanted to come back to the hospital one day.</i>
                         <div class="technologies">
                             <span class="tech-tag">SQL</span>
                             <span class="tech-tag">Tableau</span>
                             <span class="tech-tag">MSSQL</span>
+                            <span class="tech-tag">Jenkins</span>
                         </div>
+
                     </div>
                 </div>
             </div>
